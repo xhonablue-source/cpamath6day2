@@ -238,6 +238,7 @@ SLIDES = [
     "Station 5: STOP & Grow",
     "How to Build Your Shape",
     "Turn It In",
+    "Where Your Answers Go",
     "Standards Covered",
     "What You Just Did",
 ]
@@ -492,6 +493,30 @@ elif slide == 10:
 
 # ============================================================
 elif slide == 11:
+    st.markdown('<span class="pace-badge">Bonus</span>', unsafe_allow_html=True)
+    st.markdown('<div class="big-title">Where Your Answers Go</div>', unsafe_allow_html=True)
+    read_aloud(
+        "Here's a secret about today: none of this disappears into a box forever. All year long, "
+        "I'm going to use your favorite music artist, your siblings, your invention, your skill you "
+        "want to learn - all of it - to build real word problems in our i-Ready lessons. When you "
+        "see a problem this year and think, wait, that sounds like me, that's not an accident. "
+        "That's your own math class, built out of you."
+    )
+    st.markdown(
+        """
+        <div class="station-card">
+        <h3>🔁 Survey Answers &#8594; Personalized Word Problems</h3>
+        <p>Everything your class draws in the Hexagon, Pentagon, Parallelogram, Trapezoid, and
+        Octagon stations becomes real material for future i-Ready word problems - personalized so
+        they're actually relevant to the students solving them, not generic names and situations
+        from a textbook.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+# ============================================================
+elif slide == 12:
     st.markdown('<span class="pace-badge">Reference</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">Standards Covered Today</div>', unsafe_allow_html=True)
 
@@ -534,7 +559,7 @@ elif slide == 11:
     )
 
 # ============================================================
-elif slide == 12:
+elif slide == 13:
     st.markdown('<span class="pace-badge">50-55 min</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">What You Just Did</div>', unsafe_allow_html=True)
 
