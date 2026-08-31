@@ -250,6 +250,7 @@ SLIDES = [
     "Welcome Back!",
     "Let's Look at Our Data",
     "What This Data Means",
+    "Let's Talk About Confounding",
     "Today: Getting to Know You",
     "Station 1: Hexagon",
     "Station 2: Pentagon",
@@ -257,7 +258,6 @@ SLIDES = [
     "Station 4: Trapezoid",
     "Station 5: STOP & Grow",
     "How to Build Your Shape",
-    "Let's Talk About Confounding",
     "Turn It In",
     "Where Your Answers Go",
     "Standards Covered",
@@ -358,153 +358,6 @@ elif slide == 2:
 
 # ============================================================
 elif slide == 3:
-    st.markdown('<span class="pace-badge">18-22 min</span>', unsafe_allow_html=True)
-    st.markdown('<div class="big-title">Today: Getting to Know You</div>', unsafe_allow_html=True)
-    read_aloud(
-        "Today we build a shape - your own choice of one of five - and turn it into a survey about "
-        "you. Instead of writing your answers in words, you're going to draw them."
-    )
-    st.markdown(
-        """
-        **Today you will:**
-        - Use **graph paper, a pencil, and a ruler** to build one grade-6 geometric shape.
-        - **Section** your shape into equal, symmetrical, or sequential parts, depending on the shape.
-        - Answer a survey question in each section - **by drawing a picture**, not writing words.
-        """
-    )
-    st.write("There are 5 shape stations today. Your table will be assigned one.")
-
-# ============================================================
-def shape_station(tag, title, sections, theme, questions, build_note):
-    st.markdown(f'<span class="shape-tag">{tag}</span>', unsafe_allow_html=True)
-    st.markdown(f'<div class="big-title">{title}</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="sub-title">{theme}</div>', unsafe_allow_html=True)
-    st.write(f"Divide your {title.lower()} into **{sections} sections**. In each section, draw your answer:")
-    for i, q in enumerate(questions, start=1):
-        st.markdown(f'<div class="q-line"><b>{i}.</b> {q}</div>', unsafe_allow_html=True)
-    st.markdown(
-        f"""
-        <div class="warn-box">📐 Build note: {build_note}</div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-if slide == 4:
-    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
-    shape_station(
-        "STATION 1",
-        "Hexagon",
-        6,
-        "All About My Faves",
-        [
-            "Your favorite color",
-            "Your favorite music artist or song",
-            "Your favorite food",
-            "An invention you love - real, or one you wish existed",
-            "A favorite place you've been",
-            "Your favorite way to spend a weekend",
-        ],
-        "A hexagon has 6 sides. Draw it on your graph paper, then divide it into 6 roughly equal wedges from the center - like slicing a pizza.",
-    )
-
-elif slide == 5:
-    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
-    shape_station(
-        "STATION 2",
-        "Pentagon",
-        5,
-        "My Family & Home",
-        [
-            "How many siblings you have",
-            "Which number you are among your siblings (oldest, youngest, middle, only child)",
-            "A pet you have, or wish you had",
-            "Someone in your family you look up to",
-            "A tradition your family celebrates",
-        ],
-        "A pentagon has 5 sides. Divide it into 5 sections from a center point, like the Pent Structure we've used before.",
-    )
-
-elif slide == 6:
-    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
-    shape_station(
-        "STATION 3",
-        "Parallelogram",
-        4,
-        "Who I Am Becoming",
-        [
-            "A skill you want to get better at this year",
-            "A hobby or activity you love",
-            "A subject you're curious about",
-            "Something you're proud of",
-        ],
-        "This is the same shape we've been building all week for area - a parallelogram, divided into 4 equal sections with two straight lines through the middle.",
-    )
-
-elif slide == 7:
-    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
-    shape_station(
-        "STATION 4",
-        "Trapezoid",
-        3,
-        "Quick Takes",
-        [
-            "One word that describes you",
-            "Morning person or night person?",
-            "A book, show, or game you can't stop thinking about",
-        ],
-        "Draw a trapezoid, then split it into 3 sections in a row, left to right - one straight cut on each side.",
-    )
-
-elif slide == 8:
-    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
-    shape_station(
-        "STATION 5 — GROWTH MINDSET",
-        "Octagon: STOP & Grow",
-        8,
-        "A Positive Mindset Survey",
-        [
-            "Draw a time you tried something hard.",
-            "Draw how your face looks when you make a mistake and keep trying.",
-            "Draw a goal you're working toward this year.",
-            "Draw someone who encourages you.",
-            "Draw what the word \"yet\" means to you.",
-            "Draw a mistake that taught you something.",
-            "Draw how you help a friend who feels stuck.",
-            "Draw one word for how you want to feel in math class this year.",
-        ],
-        "An octagon has 8 sides, just like a STOP sign - fitting, since this shape is all about pausing to notice your own growth. Divide it into 8 wedges from the center.",
-    )
-
-# ============================================================
-elif slide == 9:
-    st.markdown('<span class="pace-badge">22-45 min</span>', unsafe_allow_html=True)
-    st.markdown('<div class="big-title">How to Build Your Shape</div>', unsafe_allow_html=True)
-    read_aloud(
-        "No matter which shape your table gets, the steps are the same. Let's walk through them "
-        "together before you start."
-    )
-    steps = [
-        "Get one sheet of graph paper, a pencil, and a ruler.",
-        "Using your ruler, draw your assigned shape as large and accurate as you can.",
-        "Divide your shape into its sections - equal, symmetrical, or sequential, depending on the shape - using straight ruler lines.",
-        "Read each survey question for your shape, one section at a time.",
-        "In that section, draw a picture that answers the question. No words - just your drawing.",
-        "When every section has a drawing, you're done!",
-    ]
-    for i, s in enumerate(steps, start=1):
-        st.markdown(
-            f"""
-            <div class="step-row">
-                <div class="step-num">{i}</div>
-                <div class="step-text">{s}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-# ============================================================
-elif slide == 10:
     st.markdown('<span class="pace-badge">Bonus</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">Let\'s Talk About Confounding</div>', unsafe_allow_html=True)
     read_aloud(
@@ -552,6 +405,153 @@ elif slide == 10:
         """,
         unsafe_allow_html=True,
     )
+
+# ============================================================
+elif slide == 4:
+    st.markdown('<span class="pace-badge">18-22 min</span>', unsafe_allow_html=True)
+    st.markdown('<div class="big-title">Today: Getting to Know You</div>', unsafe_allow_html=True)
+    read_aloud(
+        "Today we build a shape - your own choice of one of five - and turn it into a survey about "
+        "you. Instead of writing your answers in words, you're going to draw them."
+    )
+    st.markdown(
+        """
+        **Today you will:**
+        - Use **graph paper, a pencil, and a ruler** to build one grade-6 geometric shape.
+        - **Section** your shape into equal, symmetrical, or sequential parts, depending on the shape.
+        - Answer a survey question in each section - **by drawing a picture**, not writing words.
+        """
+    )
+    st.write("There are 5 shape stations today. Your table will be assigned one.")
+
+# ============================================================
+def shape_station(tag, title, sections, theme, questions, build_note):
+    st.markdown(f'<span class="shape-tag">{tag}</span>', unsafe_allow_html=True)
+    st.markdown(f'<div class="big-title">{title}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="sub-title">{theme}</div>', unsafe_allow_html=True)
+    st.write(f"Divide your {title.lower()} into **{sections} sections**. In each section, draw your answer:")
+    for i, q in enumerate(questions, start=1):
+        st.markdown(f'<div class="q-line"><b>{i}.</b> {q}</div>', unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="warn-box">📐 Build note: {build_note}</div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+if slide == 5:
+    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
+    shape_station(
+        "STATION 1",
+        "Hexagon",
+        6,
+        "All About My Faves",
+        [
+            "Your favorite color",
+            "Your favorite music artist or song",
+            "Your favorite food",
+            "An invention you love - real, or one you wish existed",
+            "A favorite place you've been",
+            "Your favorite way to spend a weekend",
+        ],
+        "A hexagon has 6 sides. Draw it on your graph paper, then divide it into 6 roughly equal wedges from the center - like slicing a pizza.",
+    )
+
+elif slide == 6:
+    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
+    shape_station(
+        "STATION 2",
+        "Pentagon",
+        5,
+        "My Family & Home",
+        [
+            "How many siblings you have",
+            "Which number you are among your siblings (oldest, youngest, middle, only child)",
+            "A pet you have, or wish you had",
+            "Someone in your family you look up to",
+            "A tradition your family celebrates",
+        ],
+        "A pentagon has 5 sides. Divide it into 5 sections from a center point, like the Pent Structure we've used before.",
+    )
+
+elif slide == 7:
+    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
+    shape_station(
+        "STATION 3",
+        "Parallelogram",
+        4,
+        "Who I Am Becoming",
+        [
+            "A skill you want to get better at this year",
+            "A hobby or activity you love",
+            "A subject you're curious about",
+            "Something you're proud of",
+        ],
+        "This is the same shape we've been building all week for area - a parallelogram, divided into 4 equal sections with two straight lines through the middle.",
+    )
+
+elif slide == 8:
+    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
+    shape_station(
+        "STATION 4",
+        "Trapezoid",
+        3,
+        "Quick Takes",
+        [
+            "One word that describes you",
+            "Morning person or night person?",
+            "A book, show, or game you can't stop thinking about",
+        ],
+        "Draw a trapezoid, then split it into 3 sections in a row, left to right - one straight cut on each side.",
+    )
+
+elif slide == 9:
+    st.markdown('<span class="pace-badge">Station</span>', unsafe_allow_html=True)
+    shape_station(
+        "STATION 5 — GROWTH MINDSET",
+        "Octagon: STOP & Grow",
+        8,
+        "A Positive Mindset Survey",
+        [
+            "Draw a time you tried something hard.",
+            "Draw how your face looks when you make a mistake and keep trying.",
+            "Draw a goal you're working toward this year.",
+            "Draw someone who encourages you.",
+            "Draw what the word \"yet\" means to you.",
+            "Draw a mistake that taught you something.",
+            "Draw how you help a friend who feels stuck.",
+            "Draw one word for how you want to feel in math class this year.",
+        ],
+        "An octagon has 8 sides, just like a STOP sign - fitting, since this shape is all about pausing to notice your own growth. Divide it into 8 wedges from the center.",
+    )
+
+# ============================================================
+elif slide == 10:
+    st.markdown('<span class="pace-badge">22-45 min</span>', unsafe_allow_html=True)
+    st.markdown('<div class="big-title">How to Build Your Shape</div>', unsafe_allow_html=True)
+    read_aloud(
+        "No matter which shape your table gets, the steps are the same. Let's walk through them "
+        "together before you start."
+    )
+    steps = [
+        "Get one sheet of graph paper, a pencil, and a ruler.",
+        "Using your ruler, draw your assigned shape as large and accurate as you can.",
+        "Divide your shape into its sections - equal, symmetrical, or sequential, depending on the shape - using straight ruler lines.",
+        "Read each survey question for your shape, one section at a time.",
+        "In that section, draw a picture that answers the question. No words - just your drawing.",
+        "When every section has a drawing, you're done!",
+    ]
+    for i, s in enumerate(steps, start=1):
+        st.markdown(
+            f"""
+            <div class="step-row">
+                <div class="step-num">{i}</div>
+                <div class="step-text">{s}</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # ============================================================
 elif slide == 11:
