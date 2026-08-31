@@ -165,45 +165,47 @@ inject_css()
 st.markdown(
     f"""
     <style>
-    .big-title {{ font-size: 2.6rem !important; }}
-    .sub-title {{ font-size: 1.4rem !important; }}
-    .station-card p, .station-card {{ font-size: 1.15rem !important; }}
-    .step-text {{ font-size: 1.2rem !important; }}
-    div[data-testid="stMarkdownContainer"] p {{ font-size: 1.15rem; line-height: 1.6; }}
+    .block-container {{ max-width: 1500px !important; padding-top: 1.5rem; }}
+    .big-title {{ font-size: 4.2rem !important; line-height: 1.15 !important; margin-bottom: 0.6rem !important; }}
+    .sub-title {{ font-size: 2.3rem !important; margin-bottom: 1.6rem !important; }}
+    .station-card {{ padding: 2rem 2.2rem !important; }}
+    .station-card h3 {{ font-size: 2rem !important; margin-bottom: 0.6rem !important; }}
+    .station-card p, .station-card {{ font-size: 1.7rem !important; line-height: 1.5 !important; }}
+    .station-card b {{ font-size: 1.8rem !important; }}
+    .step-row {{ margin-bottom: 1.6rem !important; }}
+    .step-num {{ min-width: 3.2rem !important; height: 3.2rem !important; font-size: 1.6rem !important; }}
+    .step-text {{ font-size: 1.9rem !important; line-height: 1.5 !important; }}
+    div[data-testid="stMarkdownContainer"] p {{ font-size: 1.7rem; line-height: 1.55; }}
+    div[data-testid="stMarkdownContainer"] li {{ font-size: 1.7rem; line-height: 1.55; }}
+    .pace-badge {{ font-size: 1.4rem !important; padding: 0.4rem 1.3rem !important; margin-bottom: 1.4rem !important; }}
+    .shape-tag {{ font-size: 1.6rem !important; padding: 0.35rem 1.3rem !important; margin-bottom: 0.8rem !important; }}
+    .q-line {{ font-size: 1.8rem !important; padding: 0.65rem 0 !important; border-bottom: 2px dashed #ccc !important; }}
+    .ican-box {{ font-size: 1.7rem !important; padding: 1.5rem 1.8rem !important; }}
+    .ican-tag {{ font-size: 1.1rem !important; padding: 0.25rem 0.9rem !important; }}
+    .reflect-box {{ font-size: 2rem !important; padding: 2.2rem 2.4rem !important; line-height: 1.5 !important; }}
+    .warn-box {{ font-size: 1.6rem !important; padding: 1.5rem 1.8rem !important; }}
     .readaloud-box {{
         background-color: #FFFFFF;
-        border: 3px solid {NAVY};
-        border-radius: 10px;
-        padding: 1.2rem 1.5rem;
-        margin: 0.8rem 0 1.2rem 0;
-        font-size: 1.25rem;
-        line-height: 1.6;
+        border: 4px solid {NAVY};
+        border-radius: 12px;
+        padding: 2rem 2.3rem;
+        margin: 1.2rem 0 1.8rem 0;
+        font-size: 2rem !important;
+        line-height: 1.55 !important;
     }}
     .readaloud-label {{
         display: inline-block;
         background-color: {NAVY};
         color: white;
         font-weight: 800;
-        font-size: 0.95rem;
-        padding: 0.25rem 0.8rem;
+        font-size: 1.3rem;
+        padding: 0.35rem 1.1rem;
         border-radius: 999px;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.9rem;
     }}
-    .shape-tag {{
-        display: inline-block;
-        background-color: {GOLD};
-        color: white;
-        font-weight: 800;
-        font-size: 1rem;
-        padding: 0.2rem 0.9rem;
-        border-radius: 999px;
-        margin-bottom: 0.5rem;
-    }}
-    .q-line {{
-        font-size: 1.15rem;
-        padding: 0.4rem 0;
-        border-bottom: 1px dashed #ccc;
-    }}
+    .cpa-banner h1 {{ font-size: 2.4rem !important; }}
+    .cpa-banner p {{ font-size: 1.4rem !important; }}
+    section[data-testid="stSidebar"] button {{ font-size: 1.15rem !important; }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -307,7 +309,7 @@ elif slide == 1:
         chart_df = pd.DataFrame(
             {"Group": ["Exceptional Work", "Everyone Else"], "Students": [12, 30]}
         ).set_index("Group")
-        st.bar_chart(chart_df, color=GOLD)
+        st.bar_chart(chart_df, color=GOLD, height=420)
 
     st.write("Turn and talk: about how many students out of every 10 in our class had work hung up?")
 
