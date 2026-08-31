@@ -206,6 +206,21 @@ st.markdown(
     .cpa-banner h1 {{ font-size: 2.4rem !important; }}
     .cpa-banner p {{ font-size: 1.4rem !important; }}
     section[data-testid="stSidebar"] button {{ font-size: 1.15rem !important; }}
+    .letter-tile {{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.2rem;
+        height: 3.6rem;
+        margin: 0.15rem;
+        background-color: {NAVY};
+        color: white;
+        font-size: 2.1rem;
+        font-weight: 800;
+        border-radius: 8px;
+        border-bottom: 5px solid {GOLD};
+    }}
+    .letter-row {{ margin: 1rem 0 1.4rem 0; }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -226,6 +241,11 @@ def read_aloud(text):
     )
 
 
+def spell_word(word):
+    tiles = "".join(f'<span class="letter-tile">{ch}</span>' for ch in word.upper())
+    st.markdown(f'<div class="letter-row">{tiles}</div>', unsafe_allow_html=True)
+
+
 SLIDES = [
     "Welcome Back!",
     "Let's Look at Our Data",
@@ -237,6 +257,7 @@ SLIDES = [
     "Station 4: Trapezoid",
     "Station 5: STOP & Grow",
     "How to Build Your Shape",
+    "Let's Talk About Confounding",
     "Turn It In",
     "Where Your Answers Go",
     "Standards Covered",
@@ -484,6 +505,56 @@ elif slide == 9:
 
 # ============================================================
 elif slide == 10:
+    st.markdown('<span class="pace-badge">Bonus</span>', unsafe_allow_html=True)
+    st.markdown('<div class="big-title">Let\'s Talk About Confounding</div>', unsafe_allow_html=True)
+    read_aloud(
+        "A little while ago, when I asked some of you keep-or-rid questions - like your favorite "
+        "fruit, or an animal - I had everyone close their eyes before answering. Some of you "
+        "probably wondered why."
+    )
+
+    st.markdown('<div class="sub-title">Let\'s spell it out together:</div>', unsafe_allow_html=True)
+    spell_word("CONFOUNDING")
+
+    st.markdown(
+        """
+        <div class="station-card">
+        <h3>🧠 What Is a Confounding Variable?</h3>
+        <p>A confounding variable is something outside the real question that sneaks in and changes
+        your answer - without you even noticing. If you can see your neighbor's answer before you
+        give yours, their answer can confound - or mix up - your own true answer.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    read_aloud(
+        "Closing your eyes removed that confounding variable - peeking, copying, or just being "
+        "influenced by what your neighbor picked. That way, your answer was pure. It was actually "
+        "yours."
+    )
+
+    read_aloud(
+        "Here's the real question I want you thinking about for the rest of this year: when it's "
+        "time for real math work - a quiz, an independent practice page, a test - will you give "
+        "that same pure effort? The kind where your answer is really yours, built from your own "
+        "thinking? Or will you get confounded - influenced by what a friend is doing, what answer "
+        "someone whispers, or what you think everyone else picked? The eyes-closed activity wasn't "
+        "really about fruit or animals. It was practice for something bigger: trusting your own "
+        "thinking, even when you can't see what everyone else is doing."
+    )
+
+    st.markdown(
+        """
+        <div class="warn-box">💬 Turn and talk: Can you think of a time in class when you were
+        confounded by someone else's answer, on purpose or by accident? What could you do
+        differently next time?</div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+# ============================================================
+elif slide == 11:
     st.markdown('<span class="pace-badge">45-50 min</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">Turn It In</div>', unsafe_allow_html=True)
     read_aloud(
@@ -492,7 +563,7 @@ elif slide == 10:
     )
 
 # ============================================================
-elif slide == 11:
+elif slide == 12:
     st.markdown('<span class="pace-badge">Bonus</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">Where Your Answers Go</div>', unsafe_allow_html=True)
     read_aloud(
@@ -516,7 +587,7 @@ elif slide == 11:
     )
 
 # ============================================================
-elif slide == 12:
+elif slide == 13:
     st.markdown('<span class="pace-badge">Reference</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">Standards Covered Today</div>', unsafe_allow_html=True)
 
@@ -559,7 +630,7 @@ elif slide == 12:
     )
 
 # ============================================================
-elif slide == 13:
+elif slide == 14:
     st.markdown('<span class="pace-badge">50-55 min</span>', unsafe_allow_html=True)
     st.markdown('<div class="big-title">What You Just Did</div>', unsafe_allow_html=True)
 
