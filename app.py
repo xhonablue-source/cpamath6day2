@@ -19,15 +19,15 @@ def inject_css():
         .stApp {{ background-color: #FFFFFF; }}
         .block-container {{ padding-top: 2rem; padding-bottom: 3rem; max-width: 1100px; }}
 
-        .cpa-banner {{
+        .lesson-banner {{
             background-color: {NAVY};
             color: white;
             padding: 1.1rem 1.8rem;
             border-radius: 10px;
             margin-bottom: 1.6rem;
         }}
-        .cpa-banner h1 {{ margin: 0; font-size: 1.6rem; letter-spacing: 0.5px; }}
-        .cpa-banner p {{ margin: 0.2rem 0 0 0; opacity: 0.85; font-size: 0.95rem; }}
+        .lesson-banner h1 {{ margin: 0; font-size: 1.6rem; letter-spacing: 0.5px; }}
+        .lesson-banner p {{ margin: 0.2rem 0 0 0; opacity: 0.85; font-size: 0.95rem; }}
 
         .pace-badge {{
             display: inline-block;
@@ -148,7 +148,7 @@ def inject_css():
 def banner(subtitle="Grade 6 Mathematics"):
     st.markdown(
         f"""
-        <div class="cpa-banner">
+        <div class="lesson-banner">
             <h1>GRADE 6 MATHEMATICS</h1>
             <p>{subtitle}</p>
         </div>
@@ -203,8 +203,8 @@ st.markdown(
         border-radius: 999px;
         margin-bottom: 0.9rem;
     }}
-    .cpa-banner h1 {{ font-size: 2.4rem !important; }}
-    .cpa-banner p {{ font-size: 1.4rem !important; }}
+    .lesson-banner h1 {{ font-size: 2.4rem !important; }}
+    .lesson-banner p {{ font-size: 1.4rem !important; }}
     section[data-testid="stSidebar"] button {{ font-size: 1.15rem !important; }}
     .letter-tile {{
         display: inline-flex;
