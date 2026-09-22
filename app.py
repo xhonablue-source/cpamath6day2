@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # ============================================================
-# CHANDLER PARK ACADEMY — DAY TWO (55 MINUTES)
+# GRADE 6 MATH — DAY TWO (55 MINUTES)
 # "Getting to Know You" — Data Reveal + Shape Survey Stations
 # Standalone version (no _common.py / launcher dependency)
 # ============================================================
@@ -149,7 +149,7 @@ def banner(subtitle="Grade 6 Mathematics"):
     st.markdown(
         f"""
         <div class="cpa-banner">
-            <h1>CHANDLER PARK ACADEMY</h1>
+            <h1>GRADE 6 MATHEMATICS</h1>
             <p>{subtitle}</p>
         </div>
         """,
